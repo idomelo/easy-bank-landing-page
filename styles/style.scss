@@ -8,7 +8,7 @@
   --lime-green: hsl(136, 65%, 51%);
   --bright-cyan: hsl(192, 70%, 51%);
 
-  --title-color: hls(210, 15%, 15%);
+  --title-color: hsl(210, 21%, 25%);
   --button-color: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
   --text-button-color: var(--white);
 
@@ -41,14 +41,32 @@ html {
 }
 h1 {
   font-weight: var(--h3-font-weight);
-  font-size: 2rem;
+  color: var(--title-color);
+  font-size: 3rem;
 }
 h2 {
   font-weight: var(--h2-font-weight);
+  color: var(--title-color);
+  font-size: 2rem;
 }
 h3 {
+  font-weight: var(--h2-font-weight);
+  font-size: 1.4rem;
+  color: var(--title-color);
+}
+h4 {
   font-weight: var(--h3-font-weight);
   font-size: 1rem;
+  color: var(--title-color);
+}
+h5 {
+  font-weight: var(--h3-font-weight);
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: var(--text-color);
+}
+h6 {
+  font-weight: var(--h3-font-weight);
   color: var(--text-color);
 }
 
@@ -224,4 +242,31 @@ header {
 }
 
 
+/*======= ABOUT ======= */
 
+.about__container {
+  background-color: var(--light-grayish-blue);
+  gap: 4rem;
+  padding: 6rem 10%;
+
+  .about__apresentation {
+    max-width: 50%;
+
+    .about__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .about__cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .card__img {
+      margin-bottom: 35px;
+    }
+
+    .card__title {
+      margin-bottom: 25px;
+    }
+  }
+}
