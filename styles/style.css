@@ -159,6 +159,7 @@ header .nav .mobile__menu {
       grid-template-columns: 30% 70%;
   background-color: var(--very-light-gray);
   padding: 4.5rem 0 2rem 9rem;
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -324,7 +325,7 @@ header .nav .mobile__menu {
 }
 
 .attribution {
-  background-color: var(--dark-blue);
+  background-color: var(--title-color);
   text-align: center;
   padding: 20px;
 }
@@ -361,6 +362,12 @@ header .nav .mobile__menu {
 }
 
 @media screen and (max-width: 780px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
   .header {
     z-index: 4;
     opacity: .95;
@@ -375,10 +382,10 @@ header .nav .mobile__menu {
     position: absolute;
     right: 0;
     top: 100%;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     padding-top: 4rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: var(--light-grayish-blue);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -429,7 +436,6 @@ header .nav .mobile__menu {
     }
   }
   .home__container {
-    gap: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -441,21 +447,28 @@ header .nav .mobile__menu {
             flex-direction: column-reverse;
     padding-bottom: 1vh;
     padding: 0;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
   }
   .home__container .apresentation {
     text-align: center;
+    padding: 0 10%;
   }
   .home__container .apresentation .button__action {
     padding: 15px 35px;
+    margin-bottom: 5rem;
   }
   .home__container .home__img__wrapper {
     background-image: url(../images/bg-intro-mobile.svg);
     background-size: cover;
   }
   .home__container .home__img__wrapper .home__img {
-    position: initial;
-    width: 100%;
-    top: 20% !important;
+    width: 90%;
+    margin-top: -3rem;
+    position: relative;
+    padding-bottom: 2rem;
+    right: 0;
   }
   .about__container .about__cards {
     -ms-grid-columns: (1fr)[2];
@@ -495,6 +508,9 @@ header .nav .mobile__menu {
   .about__container .about__cards {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  .articles__container .articles__title {
+    text-align: center;
   }
   .articles__container .articles__cards {
     -ms-grid-columns: (1fr)[1];
