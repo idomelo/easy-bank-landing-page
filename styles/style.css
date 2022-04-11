@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-weight: var(--h2-font-weight);
   color: var(--title-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -52,7 +52,7 @@ h3 {
 }
 
 h4 {
-  font-weight: var(--h3-font-weight);
+  font-weight: var(--h2-font-weight);
   font-size: 1rem;
   color: var(--title-color);
 }
@@ -67,6 +67,8 @@ h5 {
 h6 {
   font-weight: var(--h3-font-weight);
   color: var(--text-color);
+  font-size: 0.8rem;
+  line-height: 1.1rem;
 }
 
 ul {
@@ -297,11 +299,66 @@ header .nav .mobile__menu {
   gap: 2rem;
 }
 
-.about__container .about__cards .card__img {
+.about__container .about__cards .card__icon {
   margin-bottom: 35px;
 }
 
 .about__container .about__cards .card__title {
   margin-bottom: 25px;
+}
+
+/*======= ARTICLES ======= */
+.articles__container {
+  background-color: var(--very-light-gray);
+  padding: 6rem 10%;
+}
+
+.articles__container .articles__title {
+  padding-bottom: 3rem;
+}
+
+.articles__container .articles__cards {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.articles__container .articles__cards .article__card {
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.articles__container .articles__cards .article__card .article__img__wrapper {
+  height: 12rem;
+  background-size: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.articles__container .articles__cards .article__card .article__img__wrapper.one {
+  background-image: url(../images/image-currency.jpg);
+}
+
+.articles__container .articles__cards .article__card .article__img__wrapper.two {
+  background-image: url(../images/image-restaurant.jpg);
+}
+
+.articles__container .articles__cards .article__card .article__img__wrapper.three {
+  background-image: url(../images/image-plane.jpg);
+}
+
+.articles__container .articles__cards .article__card .article__img__wrapper.four {
+  background-image: url(../images/image-confetti.jpg);
+}
+
+.articles__container .articles__cards .article__card .card__body {
+  padding: 30px 20px 20px;
+}
+
+.articles__container .articles__cards .article__card .card__body .article__title {
+  margin: 0.6rem 0;
+}
+
+.articles__container .articles__cards .article__card .card__body .article__writer {
+  font-size: 0.6rem;
 }
 /*# sourceMappingURL=style.css.map */

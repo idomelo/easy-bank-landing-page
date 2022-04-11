@@ -47,7 +47,7 @@ h1 {
 h2 {
   font-weight: var(--h2-font-weight);
   color: var(--title-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3 {
   font-weight: var(--h2-font-weight);
@@ -55,7 +55,7 @@ h3 {
   color: var(--title-color);
 }
 h4 {
-  font-weight: var(--h3-font-weight);
+  font-weight: var(--h2-font-weight);
   font-size: 1rem;
   color: var(--title-color);
 }
@@ -68,6 +68,8 @@ h5 {
 h6 {
   font-weight: var(--h3-font-weight);
   color: var(--text-color);
+  font-size: 0.8rem;
+  line-height: 1.1rem;
 }
 
 ul {
@@ -261,7 +263,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 
-    .card__img {
+    .card__icon {
       margin-bottom: 35px;
     }
 
@@ -269,4 +271,60 @@ header {
       margin-bottom: 25px;
     }
   }
+}
+
+/*======= ARTICLES ======= */
+
+.articles__container {
+  background-color: var(--very-light-gray);
+  padding: 6rem 10%;
+  
+  
+  .articles__title {
+    padding-bottom: 3rem;
+  }
+  
+  .articles__cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+    
+    .article__card {
+      border-radius: 8px;
+      background-color: var(--white);
+      
+      .article__img__wrapper {
+        height: 12rem;
+        background-size: cover;
+        border-radius: 6px 6px 0 0;
+        
+        &.one {
+          background-image: url(../images/image-currency.jpg);
+        }
+        &.two {
+          background-image: url(../images/image-restaurant.jpg);
+        }
+        &.three {
+          background-image: url(../images/image-plane.jpg);
+        }
+        &.four {
+          background-image: url(../images/image-confetti.jpg);
+        }
+      }
+
+
+      .card__body {
+        padding: 30px 20px 20px;
+        
+        .article__title {
+          margin: 0.6rem 0;
+        }
+
+        .article__writer {
+          font-size: 0.6rem;
+        }
+      }
+      
+    }
+  }
+
 }
