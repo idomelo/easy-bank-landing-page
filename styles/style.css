@@ -373,6 +373,73 @@ header .nav .mobile__menu {
   color: var(--lime-green);
 }
 
+/*=======  FAQ ACCORDION =======*/
+.faq {
+  background-color: var(--light-grayish-blue);
+  padding: 6rem 10%;
+}
+
+.faq .faq__title {
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.faq .accordion__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.faq .accordion__container .content__box {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.faq .accordion__container .content__box .label {
+  position: relative;
+  padding: 10px 40px 10px 10px;
+  background-image: var(--button-color);
+  color: var(--text-button-color);
+  cursor: pointer;
+}
+
+.faq .accordion__container .content__box .label::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.faq .accordion__container .content__box .content {
+  position: relative;
+  background-color: var(--white);
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  overflow-y: auto;
+}
+
+.faq .accordion__container .content__box.active .content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+}
+
+.faq .accordion__container .content__box.active .label::before {
+  content: '-';
+}
+
 /*============  MEDIA QUERIES ============ */
 @media screen and (max-width: 1000px) {
   .footer__container {

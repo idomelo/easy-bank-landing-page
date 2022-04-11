@@ -1,3 +1,5 @@
+/* ====== NAVIGATION ====== */
+
 const mobileMenu = document.getElementById('mobile__menu')
 const navList = document.getElementById('nav__list')
 const navLinks = document.querySelectorAll('.nav__link')
@@ -34,3 +36,19 @@ function linkAction(){
 
 }
 navLinks.forEach(n => n.addEventListener('click', linkAction))
+
+
+/* ====== ACCORDION ====== */
+
+
+const accordion = document.querySelectorAll('.content__box')
+
+accordion.forEach(n => n.addEventListener('click', function() {
+  
+  if(!this.classList.contains('active')) {
+    accordion.forEach(n => n.classList.remove('active'))
+    this.classList.add('active')
+  } else {
+    this.classList.remove('active')
+  }
+}))

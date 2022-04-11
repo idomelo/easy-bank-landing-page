@@ -345,6 +345,68 @@ header {
   }
 }
 
+/*=======  FAQ ACCORDION =======*/
+
+.faq {
+  background-color: var(--light-grayish-blue);
+  padding: 6rem 10%;
+  
+  .faq__title {
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .accordion__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 800px;
+  
+    .content__box {
+      position: relative;
+      margin:10px 20px;
+  
+      .label {
+        position: relative;
+        padding: 10px 40px 10px 10px;
+        background-image: var(--button-color);
+        color: var(--text-button-color);
+        cursor: pointer;
+  
+        &::before {
+          content: '+';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          font-size: 1.5rem;
+        }
+      }
+  
+      .content {
+        position: relative;
+        background-color: var(--white);
+        height: 0;
+        overflow: hidden;
+        transition: 500ms;
+        overflow-y: auto;
+      }
+  
+      &.active {
+        .content{
+          height: fit-content;
+          padding: 10px;
+        }
+  
+        .label::before {
+          content: '-';
+        }
+      }
+    }
+  }
+}
+
+
 
 /*============  MEDIA QUERIES ============ */
 
