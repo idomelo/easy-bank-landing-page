@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
 /*======= VARIABLES CSS =======*/
+
+// $color: red;
+
 :root {
 
   /*===== Primary =====*/
@@ -13,7 +16,7 @@
   --text-button-color: var(--white);
 
   /*===== Neutral =====*/
-  --text-color: rgb(150, 152, 166);
+  --text-color-primary: hsl(233, 8%, 62%);
   --light-grayish-blue: rgb(243, 244, 246);
   --very-light-gray: rgb(250, 250, 250);
   --white: rgb(255, 255, 255);
@@ -48,7 +51,7 @@ h2, h3, h4 {
   font-weight: var(--h2-font-weight);
 }
 h5, h6 {
-  color: var(--text-color);
+  color: var(--text-color-primary);
 }
 
 h1 {
